@@ -1,0 +1,164 @@
+/* Basis */
+
+/*  TODO: figure out why not working
+@font-face {
+    font-family: Aaargh;
+    src: url('./fonts/Aaargh.ttf');
+}
+*/
+
+:root /* General */ {
+    scroll-behavior: smooth;
+    --textNormal: #ffffff;
+    --textPassive: #d9d9d9;
+    --colorBackground: #141414;
+    --colorSecondary: #1c1c1c;
+    --colorAccents: #EEC643;
+    --colorAccentsLight: #f7d76d;
+}
+
+body /* General */ {
+    background-color: var(--colorBackground);
+    /* maybe the fonts are from the apple website ,-, JUST MAYBE! */
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: var(--textNormal);
+    margin: 20px;
+}
+
+/* Navigation Bar */
+
+nav /* General */ {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--colorSecondary);
+    border-radius: 50px;
+}
+
+nav ul /* General */ {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin: 0px;
+}
+
+nav ul li /* General */ {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+  
+nav ul li a /* General */ {
+    color: var(--textNormal);
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding: 15px;
+}
+  
+nav ul li a:hover /* General */ {
+    background-color: var(--colorBackground);
+}
+
+nav ul li a img /* General */ {
+    max-height: 20px;
+}
+
+/* Header */
+
+header /* General */ {
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+/* product List */
+
+.productList /* index.html */ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productList div /* index.html */ {
+    background-color: var(--colorSecondary);
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+    max-width: 350px;
+    min-width: 200px;
+}
+
+.productList div h3 {
+    margin-left: 10px;
+}
+
+.categoryTags /* index.html & productExample.html */ {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: var(--colorBackground);
+    border-radius: 50px;
+}
+
+.categoryTags p /* index.html & productExample.html */ {
+    color: var(--textPassive);
+    transition-duration: 0.3s;
+    font-size: small;
+    padding: 5px;
+    margin: 0px; 
+    cursor: default;
+}
+
+.categoryTags p:hover /* index.html & productExample.html */ {
+    color: var(--colorAccents);
+}
+
+.productList div img /* index.html */ {
+    align-content: flex-end;
+    border-radius: 10px;
+}
+
+/* product Information */
+
+.productInformation /* productExample.html */ {
+    background-color: var(--colorSecondary);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 90vh;
+}
+
+.productInformation img /* productExample.html */ {
+    border-radius: 10px;
+}
+
+Button /* General */ {
+    color: var(--colorBackground);
+    background-color: var(--colorAccents);
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    width: 100%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+Button:hover /* General */ {
+    background-color: var(--colorAccentsLight);
+}
+
+.productPrice /* productExample.html */ {
+    color: var(--colorAccents);
+    font-size: larger;
+}
+
+/* Error 404 Site */
+
+.error404 img /* 404.html */ {
+    max-width: 90%;
+}
+
+/* Footer */ 
+
+footer /* General */ {
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    opacity: 20%;
+    bottom: 10pt;
+}

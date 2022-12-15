@@ -1,0 +1,47 @@
+<!--
+    This file is for the homepage of the website.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Website Head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style-dark.css">
+        <title>Home - Silly-Games</title>
+    </head>
+
+    <!-- Body Element -->
+    <body>
+        <!-- Header -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/"><img src="/images/home.png" alt="Home"></a></li>
+                    <li><a href="https://github.com/Silly-School/INP_Website" target="_blank"><img src="/images/github.png" alt="Github"></a></li>
+                    <li><a href="https://ko-fi.com/sillysoon" target="_blank"><img src="/images/kofi.png" alt="Ko-fi"></a></li>
+                </ul>
+                <ul>
+                    <li><a href="/"><img src="/images/shopping-cart.png" alt="Shopping Cart"></a></li>
+                    <li><a href="/"><img src="/images/user.png" alt="User"></a></li>
+                </ul>
+            </nav>
+            <center>
+                <h1>Welcome to the Silly-Games Shop!</h1>
+            </center>
+        </header>
+
+        <!-- Section productList (referes to prepairINDEX.js) -->
+        <section class="productList">
+            ${insertGames}
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <center>
+                <p>© 2022 SillySoon </p>
+            </footer>
+        </footer>
+    </body>
+</html>

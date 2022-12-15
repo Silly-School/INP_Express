@@ -1,0 +1,57 @@
+<!--
+    This file is a preset of a product.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Website Head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style-dark.css">
+        <title>${fields[0]} - Silly-Games</title>
+    </head>
+
+    <!-- Body Element -->
+    <body>
+        <!-- Header -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/"><img src="/images/home.png" alt="Home"></a></li>
+                    <li><a href="https://github.com/Silly-School/INP_Website" target="_blank"><img src="/images/github.png" alt="Github"></a></li>
+                    <li><a href="https://ko-fi.com/sillysoon" target="_blank"><img src="/images/kofi.png" alt="Ko-fi"></a></li>
+                </ul>
+                <ul>
+                    <li><a href="/"><img src="/images/shopping-cart.png" alt="Shopping Cart"></a></li>
+                    <li><a href="/"><img src="/images/user.png" alt="User"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Section -->
+        <center>
+            <section class="productInformation">
+                    <img width="100%" src="${fields[4]}">
+                    <h3>${fields[0]}</h3>
+                    <p>${fields[1]}</p>
+                    <section class="categoryTags">
+                        <p>Tags: </p>
+                        <p>${fields[6]}</p>
+                        <p>${fields[7]}</p>
+                        <p>${fields[8]}</p>
+                    </section>
+                    <p class="productPrice">${fields[3]} €</p>
+                    <hr>
+                    <a href="${fields[5]}" target="_blank"><button>Jetzt kaufen!</button></a>
+            </section>
+        </center>
+
+        <!-- Footer -->
+        <footer>
+            <center>
+                <p>© 2022 SillySoon </p>
+            </footer>
+        </footer>
+    </body>
+</html>
