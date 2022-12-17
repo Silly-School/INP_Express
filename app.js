@@ -23,17 +23,19 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.send(prepairINDEX());
-    logger.custom(req.ip, 'yellow', '', req.url);
 });
 
 app.get('/game/*', (req, res) => {
-    res.send(prepairHTML(req.url));
-    logger.custom(req.ip, 'yellow', '', req.url);
+    if (prepairHTML(req.url) != undefined) {
+        res.send(prepairHTML(req.url));
+    }
+    else {
+        res.sendFile(__dirname + '/views/404.html');
+    }
 });
 
 app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/views/404.html');
-    logger.custom(req.ip, 'yellow', '', req.url);
 });
 
 app.listen(PORT, () =>{
