@@ -4,7 +4,7 @@
 <a href="https://github.com/SillySoon" target="_blank"> ![](https://img.shields.io/github/followers/sillysoon?labelColor=d2d1d1&color=2f2f2f&logo=github&logoColor=2f2f2f&style=for-the-badge)</a>
 
 ## Goals:
-+ Convert (INP_website)[https://github.com/Silly-School/INP_Website] into a Express project
++ Convert [INP_website](https://github.com/Silly-School/INP_Website) into a Express project
 
 # Contact:
 
