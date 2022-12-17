@@ -28,7 +28,7 @@ const prepairINDEX = function() {
                     <p>${fields[8]}</p>
                 </section>
                 <hr>
-                <a href="{redirect}"><button>View Game!</button></a>
+                <a href="/game/{redirect}"><button>View Game!</button></a>
             </div>
         `;
 

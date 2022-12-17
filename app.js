@@ -11,7 +11,7 @@ const prepairINDEX = require('./app/prepairINDEX');
 const app = express();
 
 // define a port
-const PORT = 3000;
+const PORT = 8080;
 
 //  Setup timeFormat
 logger.timeFormat("MMM Do YY - h:mm:ss a");
@@ -23,21 +23,19 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.send(prepairINDEX());
+    logger.custom(req.ip, 'yellow', '', req.url);
 });
 
-app.get('/anno-1800', (req, res) => {
-    res.send(prepairHTML(0));
-});
-
-app.get('/thehunter-call-of-the-wild', (req, res) => {
-    res.send(prepairHTML(1));
+app.get('/game/*', (req, res) => {
+    res.send(prepairHTML(req.url));
+    logger.custom(req.ip, 'yellow', '', req.url);
 });
 
 app.get('/*', (req, res) => {
-    logger.debug(req.url);
     res.sendFile(__dirname + '/views/404.html');
+    logger.custom(req.ip, 'yellow', '', req.url);
 });
 
 app.listen(PORT, () =>{
-    logger.success(`Example app listening on http://localhost:${PORT}/`);
+    logger.success(`App ready on http://localhost:${PORT}/`);
 });

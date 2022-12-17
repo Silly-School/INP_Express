@@ -12,7 +12,8 @@ products.shift();
     prepairHTML function
     This function will split the csv data to finally use it in our html
 */
-const prepairHTML = function(product) {
+const prepairHTML = function(url) {
+
     const splitEachProduct = record => {
         const fields = record.split(";");
 
@@ -24,6 +25,8 @@ const prepairHTML = function(product) {
             html = html.replaceAll(`\${fields[${index}]}`, field);
         });
 
+        html = html.replaceAll('{element}', fields[0].toLowerCase().replace(/ /g, "-"));
+
         //  returns the html
         return html;
     };
@@ -32,7 +35,17 @@ const prepairHTML = function(product) {
         .filter(row => row !== "")
         .map(splitEachProduct);
 
-    return (pages[product]);
+    //  prepair for end result
+    let result;
+
+    //  find the correct element
+    pages.forEach((element) => {
+        if (element.includes(url) == true) {
+            result = element;
+        }
+    });
+
+    return (result);
 };
 
 module.exports = prepairHTML;
